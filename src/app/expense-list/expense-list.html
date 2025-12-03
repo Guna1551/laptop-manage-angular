@@ -1,0 +1,39 @@
+<div class="container mt-4">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h2 class="mb-3 text-center">Saved Expense Records</h2>
+
+      <table class="table table-bordered table-striped" *ngIf="expenses.length > 0; else noData">
+        <thead class="table-dark">
+          <tr>
+            <th>#</th>
+            <th>Expense Date</th>
+            <th>Type</th>
+            <th>Cost</th>
+            <th>Paid To</th>
+            <th>Bill No</th>
+            <th>Bill Date</th>
+            <th>Comments</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let e of expenses; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ e.expenseDate }}</td>
+            <td>{{ e.expenseType }}</td>
+            <td>{{ e.cost }}</td>
+            <td>{{ e.paidTo }}</td>
+            <td>{{ e.billNo }}</td>
+            <td>{{ e.billDate }}</td>
+            <td>{{ e.comments }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ng-template #noData>
+        <p class="text-center text-muted">No expenses added yet.</p>
+      </ng-template>
+
+    </div>
+  </div>
+</div>

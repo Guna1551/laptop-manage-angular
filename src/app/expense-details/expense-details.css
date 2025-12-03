@@ -1,0 +1,12 @@
+.card {
+  border-radius: 10px;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+.input-group .form-control[readonly] {
+  background-color: #fff;
+  cursor: pointer;
+}

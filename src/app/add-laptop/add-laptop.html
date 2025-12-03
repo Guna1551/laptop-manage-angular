@@ -1,0 +1,55 @@
+<div class="container-fluid bg-dark text-light py-3">
+  <header class="text-center">
+  <h1 class="display-4">Enter Laptop Details</h1>
+  </header>
+</div>
+<section class="container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="row g-3 p-5 my-3 text-dark needs-validation" novalidate>
+    
+    <div class="col-md-6">
+    <label>Brand</label>
+    <input type="text" class="form-control" formControlName="brand" name="name"
+     required placeholder="Enter your Laptop Brand" /><br />
+      </div>
+      
+      <div class="col-md-6">
+    <label>Model</label>
+    <input type="text" class="form-control" formControlName="model" name="model"
+    placeholder="Enter the Model Name" required /><br />
+        </div>
+
+        <div class="col-md-6">
+    <label>CPU</label>
+    <input type="text" class="form-control" formControlName="cpu" name="cpu"
+    placeholder="Ex: INTEL i5 or AMD Ryzen 9" required /><br />
+          </div>
+
+    <div class="col-md-6">
+    <label>Ram (GB)</label>
+    <input type="number" class="form-control" formControlName="ramGb" name="ramGb"
+    placeholder="Enter Ram of your Laptop" required /><br />
+      </div>
+    
+      <div class="col-md-6">
+    <label>Storage</label>
+    <input type="text" class="form-control" formControlName="storage" name="storage"
+    placeholder="Enter the Storage of your Laptop" required /><br />
+</div>
+    
+    <div class="col-md-6">
+    <label>Price</label>
+    <input type="number" class="form-control" formControlName="price" name="price"
+    placeholder="Enter the price Of your Laptop" required /><br />
+      </div>
+    
+      <div class="col-md-6">
+    <label>Purchase Date : </label>
+    <input type="date" class="form-control" formControlName="purchaseDate" name="purchaseDate"
+    placeholder="Select the date of Purchase" required /><br />
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+    <button type="submit" class="btn btn-outline-warning btn-lg">Submit</button>
+    
+    </div>
+  </form>
+</section>

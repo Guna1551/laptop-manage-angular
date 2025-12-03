@@ -1,0 +1,42 @@
+<div class="container-fluid bg-dark text-light p-2">
+  <header class="text-center">
+  <h2 class="display-6">Laptop Details</h2>
+  </header>
+</div>
+
+  <div class="container mt-5">
+
+    <table class="table table-success table-striped table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Brand</th>
+          <th>Model</th>
+          <th>CPU</th>
+          <th>RAM (GB)</th>
+          <th>Storage</th>
+          <th>Price (₹)</th>
+          <th>Purchase Date</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        @for (l of laptops(); track $index) {
+          <tr>
+            <td>{{ $index + 1 }}</td>
+            <td>{{ l.brand }}</td>
+            <td>{{ l.model }}</td>
+            <td>{{ l.cpu }}</td>
+            <td>{{ l.ramGb }}</td>
+            <td>{{ l.storage }}</td>
+            <td>{{ l.price }}</td>
+            <td>{{ l.purchaseDate }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+
+
+  <div>
+  <button (click)="clearAll()" class="btn btn-outline-danger btn-lg">Clear All Laptops</button>
+    </div>
+</div>
